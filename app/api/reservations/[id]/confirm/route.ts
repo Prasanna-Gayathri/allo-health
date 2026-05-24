@@ -8,7 +8,7 @@ export async function POST(
   try {
     const { id } = await params
 
-    const result = await prisma.$transaction(async (tx) => {
+    const result = await prisma.$transaction(async (tx: any) => {
       const reservation = await tx.reservation.findUnique({
         where: { id },
       })
