@@ -13,7 +13,7 @@ export async function GET() {
       },
     })
 
-    const result = products.map((product) => ({
+    const result = products.map((product: any) => ({
       id: product.id,
       name: product.name,
       description: product.description,
