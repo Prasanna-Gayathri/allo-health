@@ -18,7 +18,7 @@ export async function GET() {
       name: product.name,
       description: product.description,
       imageUrl: product.imageUrl,
-      stocks: product.stocks.map((stock) => ({
+      stocks: product.stocks.map((stock: any) => ({
         warehouseId: stock.warehouseId,
         warehouseName: stock.warehouse.name,
         warehouseLocation: stock.warehouse.location,
